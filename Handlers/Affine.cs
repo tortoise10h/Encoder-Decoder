@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace encoder_decoder
+namespace Encoder_Decoder.Handlers
 {
     public class Affine
     {

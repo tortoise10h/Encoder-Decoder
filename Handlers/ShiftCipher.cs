@@ -1,6 +1,6 @@
 using System;
 
-namespace encoder_decoder
+namespace Encoder_Decoder.Handlers
 {
     public class ShiftCipher
     {

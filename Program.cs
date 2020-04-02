@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
+using Encoder_Decoder.Handlers;
 
 namespace encoder_decoder
 {
@@ -14,6 +16,8 @@ namespace encoder_decoder
                 Console.WriteLine("2. Decode of Shift Cipher.");
                 Console.WriteLine("3. Encode using Affine.");
                 Console.WriteLine("4. Decode of Affine.");
+                Console.WriteLine("5. Encode using Vinegenere.");
+                Console.WriteLine("6. Decode of Vinegenere.");
                 Console.WriteLine("0. Exit!");
 
                 int choice = Convert.ToInt32(Console.ReadLine());
@@ -64,6 +68,26 @@ namespace encoder_decoder
                             Console.WriteLine("\n>>> Encode of '{0}' is: {1}\n", code, decoded);
                             break;
                         }
+                    case 5:
+                        {
+                            Console.WriteLine("Enter string to encode: ");
+                            string code = Console.ReadLine();
+                            Console.WriteLine("Enter key: ");
+                            string key = Console.ReadLine();
+                            string encoded = Vinegenere.encode(code, key);
+                            Console.WriteLine("\n>>> Encoded of '{0}' is: {1}\n", code, encoded);
+                            break;
+                        }
+                    case 6:
+                        {
+                            Console.WriteLine("Enter string to decode: ");
+                            string code = Console.ReadLine();
+                            Console.WriteLine("Enter key: ");
+                            string key = Console.ReadLine();
+                            string decoded = Vinegenere.decode(code, key);
+                            Console.WriteLine("\n>>> Encode of '{0}' is: {1}\n", code, decoded);
+                            break;
+                        }
                     default:
                         {
                             Console.WriteLine("!!!Wrong number! Please enter again!!!\n");
@@ -71,7 +95,7 @@ namespace encoder_decoder
                         }
                 }
             }
-            Console.WriteLine("\n\n###################################\n#####!!!Thank for using <3 !!!#####\n###################################");
+            Console.WriteLine("\n\n###################################\n#####!!! Thank for using <3 !!!#####\n###################################");
         }
     }
 }

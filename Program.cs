@@ -74,7 +74,7 @@ namespace encoder_decoder
                             string code = Console.ReadLine();
                             Console.WriteLine("Enter key: ");
                             string key = Console.ReadLine();
-                            string encoded = Vinegenere.encode(code, key);
+                            string encoded = Vigenere.encode(code, key);
                             Console.WriteLine("\n>>> Encoded of '{0}' is: {1}\n", code, encoded);
                             break;
                         }
@@ -84,7 +84,7 @@ namespace encoder_decoder
                             string code = Console.ReadLine();
                             Console.WriteLine("Enter key: ");
                             string key = Console.ReadLine();
-                            string decoded = Vinegenere.decode(code, key);
+                            string decoded = Vigenere.decode(code, key);
                             Console.WriteLine("\n>>> Encode of '{0}' is: {1}\n", code, decoded);
                             break;
                         }

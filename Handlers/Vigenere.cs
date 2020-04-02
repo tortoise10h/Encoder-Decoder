@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Encoder_Decoder.Handlers
 {
-    public class Vinegenere
+    public class Vigenere
     {
         public static string encode(string text, string key)
         {
